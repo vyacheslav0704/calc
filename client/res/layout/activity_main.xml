@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="horizontal" >
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Адрес сервера"
+        android:textSize="20dp" />
+    
+    <EditText
+        android:id="@+id/adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        
+        android:hint="192.168.0.101" />
+
+    
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    
+    android:gravity="center"
+    android:orientation="horizontal" >
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Порт сервера"
+        android:textSize="20sp" />
+    
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:inputType="number"
+        android:hint="5555" />
+
+    
+</LinearLayout>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="Выражение для вычисления"
+    android:textSize="20sp" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/vyrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:imeOptions="actionGo"
+        android:hint="Выражение" />
+    
+    <Button
+        android:id="@+id/ravno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:text="="
+         />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="7dp"
+         android:text="    "
+         />
+ 
+    </LinearLayout>
+    <SlidingDrawer
+            android:id="@+id/drawer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:content="@+id/historText"
+            android:handle="@+id/historKnop"
+            android:orientation="vertical" >
+    
+    <TextView
+    android:id="@+id/historKnop"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:text="История ⇧"
+    android:textSize="20sp"
+          />
+    
+    
+   
+    
+     <ListView
+         android:id="@+id/historText"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginLeft="5dp"
+         android:textSize="18sp"
+         />
+                
+     
+    
+    
+    </SlidingDrawer>
+    
+</LinearLayout>

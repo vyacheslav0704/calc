@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+ 
+   
+      <item android:id="@+id/Sound"
+       android:title="Звук"
+       android:checkable="true"
+       android:checked="true"
+       android:showAsAction="never"
+       
+      
+   />
+      
+      
+       <item android:id="@+id/Vibro"
+       android:title="Вибро"
+       android:checkable="true"
+       android:checked="true"
+       android:showAsAction="never"
+       
+      
+   />
+         
+       <item android:id="@+id/Exit"
+       android:title="Выход"
+       android:icon="@drawable/ic_menu_exit_light"
+       android:showAsAction="always|withText"      
+      
+   />
+
+       
+</menu>
