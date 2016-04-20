@@ -46,11 +46,11 @@ public class FragmenForDialog extends DialogFragment {
 		   case 0://type 0 - exit-dialog 
 		
 		
-		     dialog.setTitle("Вы действительно желаете выйти?");// Text for exit-dialog
+		     dialog.setTitle("Р’С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ Р¶РµР»Р°РµС‚Рµ РІС‹Р№С‚Рё?");// Text for exit-dialog
 			  
 			
 			  
-			 dialog.setPositiveButton("Да", new DialogInterface.OnClickListener() {//Exit action for button yes
+			 dialog.setPositiveButton("Р”Р°", new DialogInterface.OnClickListener() {//Exit action for button yes
 				
 				
 			 public void onClick(DialogInterface dialog, int which) {
@@ -60,7 +60,7 @@ public class FragmenForDialog extends DialogFragment {
 				 }
 			});
 			 
-			 dialog.setNegativeButton("Нет",  new DialogInterface.OnClickListener() {
+			 dialog.setNegativeButton("РќРµС‚",  new DialogInterface.OnClickListener() {
 					
 					
 					public void onClick(DialogInterface dialog, int which) {
@@ -75,9 +75,9 @@ public class FragmenForDialog extends DialogFragment {
 			
 			
 	        case 1://type 1 - network
-			  dialog.setMessage("Для работы программы требуется соединение с интернетом, которого сейчас нет. Установите его.");// Text for network-dialog
+			  dialog.setMessage("Р”Р»СЏ СЂР°Р±РѕС‚С‹ РїСЂРѕРіСЂР°РјРјС‹ С‚СЂРµР±СѓРµС‚СЃСЏ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ РёРЅС‚РµСЂРЅРµС‚РѕРј, РєРѕС‚РѕСЂРѕРіРѕ СЃРµР№С‡Р°СЃ РЅРµС‚. РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РµРіРѕ.");// Text for network-dialog
 			  
-			  dialog.setPositiveButton("ОК", new DialogInterface.OnClickListener() {// Open network settings why yes
+			  dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {// Open network settings why yes
 					
 					 @Override
 					 public void onClick(DialogInterface dialog, int which) {

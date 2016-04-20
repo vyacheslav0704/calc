@@ -29,8 +29,7 @@ class SocketSend extends AsyncTask <MainActivity, Void, String> {// Thread for s
 		try {
 			
 			
-				Log.e("Soket", "Socket sending");
-				
+								
 			 	s = new Socket();//new socket				 			 	
 				
 			 	String adress = activity.addressServ.getText().toString();// adress for socket
@@ -58,7 +57,7 @@ class SocketSend extends AsyncTask <MainActivity, Void, String> {// Thread for s
 			 					 	
 			 	OutputStream outStream = s.getOutputStream();
 			 	
-			 	//Log.e("Soket", "Послал на сервер "+activity.vyrag.getText()+ " "+adress+" :"+port);
+			 	Log.e("Soket", "Послал на сервер "+activity.vyrag.getText()+ " "+adress+" :"+port);
 			 				 	
 			 	PrintWriter  out = new PrintWriter(outStream,true);
 			 	out.println(activity.vyrag.getText());//send to server exception

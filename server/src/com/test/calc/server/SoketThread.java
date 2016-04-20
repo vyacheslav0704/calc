@@ -13,6 +13,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.text.NumberFormat;
 import java.util.Iterator;
 
 import expr.Expr;
@@ -32,21 +33,21 @@ public class SoketThread extends AsyncTask <Void, Void, Void>{
 	
 	protected void onPreExecute() {
 		
-		activity.send.setText("Остановить Сервер");// Change text on button start	
+		activity.send.setText("РћСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРµСЂРІРµСЂ");// Change text on button start	
 		activity.portServ.setEnabled(false);//Blocking server port text field
 	
 	}
 	
 	protected void onPostExecute() {
 	
-		activity.send.setText("Запустить сервер");	
+		activity.send.setText("Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРµСЂРІРµСЂ");	
 		activity.portServ.setEnabled(true);
 		
 	}
 	
 	protected void onCancelled() {
 		
-		activity.send.setText("Запустить сервер");	
+		activity.send.setText("Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРµСЂРІРµСЂ");	
 		activity.portServ.setEnabled(true);
 		
 	}
@@ -74,7 +75,7 @@ public class SoketThread extends AsyncTask <Void, Void, Void>{
 				ssc.socket().bind(hostAddress);
 				ByteBuffer buffer = ByteBuffer.allocate(1024);
 			
-				Log.e("SoketServer", hostAddress.getAddress()+" : "+hostAddress.getPort()+"  "+ssc.isOpen());
+				Log.e("SoketServer", hostAddress.getAddress()+" : "+hostAddress.getPort());
 				
 				while(!isCancelled()){
 					
@@ -110,8 +111,8 @@ public class SoketThread extends AsyncTask <Void, Void, Void>{
 	                               try{
 	                            	   
 	                            	   Expr expr = Parser.parse(inExpression);
-	                            	   result = expr.value()+"";
-	                            	   
+	                            	 //  result =NumberFormat.getInstance ().format (expr.value()+"");
+	                            	   result =expr.value()+"";
 	                               }
 	                                catch(Exception e){
 	                                	Log.e("SoketParse", e.toString());
@@ -126,7 +127,7 @@ public class SoketThread extends AsyncTask <Void, Void, Void>{
 	                                  
 	                                  }
 	                              
-	                              catch(Exception e){ Log.e("Soket 1", e.toString());}
+	                              catch(Exception e){ Log.e("Soket 1", e.toString()+" "+e.getMessage());}
 	                              
 	                           }// if(k.readyOps())
 	                        
